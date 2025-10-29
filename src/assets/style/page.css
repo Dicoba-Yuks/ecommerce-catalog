@@ -40,6 +40,31 @@ body {
   flex-grow: 1;
   display: flex;
 }
+/* --- LOADING STATE --- */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 600px; 
+  color: var(--color-dark-gray);
+  font-size: 1.1rem;
+}
+.spinner {
+  border: 6px solid var(--color-medium-gray); 
+  border-top: 6px solid var(--color-dark-navy); 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+/* Animasi untuk memutar spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /* --- UNAVAILABLE DESIGN --- */
 .page-unavailable {
@@ -201,12 +226,6 @@ body {
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
-.rating-info {
-  font-size: 0.9em;
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
 .divider {
   border: none;
     height: 1px;
@@ -231,9 +250,6 @@ body {
   display: inline-block;
   align-items: center;
   gap: 5px;
-}
-.rating-count {
-  color: var(--color-medium-gray);
 }
 
 /* --- MEN SECTION DESIGN --- */
